@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5D49F3162AC6E26300B9997F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3152AC6E26300B9997F /* AppDelegate.swift */; };
-		5D49F3182AC6E26300B9997F /* AugmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3172AC6E26300B9997F /* AugmentedView.swift */; };
 		5D49F31A2AC6E26400B9997F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D49F3192AC6E26400B9997F /* Assets.xcassets */; };
 		5D49F31D2AC6E26400B9997F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D49F31C2AC6E26400B9997F /* Preview Assets.xcassets */; };
 		5D49F3292AC6E35400B9997F /* toy_car.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 5D49F3252AC6E35400B9997F /* toy_car.usdz */; };
@@ -16,18 +15,23 @@
 		5D49F32B2AC6E35400B9997F /* tv_retro.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 5D49F3272AC6E35400B9997F /* tv_retro.usdz */; };
 		5D49F32C2AC6E35400B9997F /* toy_biplane_idle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 5D49F3282AC6E35400B9997F /* toy_biplane_idle.usdz */; };
 		5D49F3302AC6E55F00B9997F /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 5D49F32F2AC6E55F00B9997F /* FocusEntity */; };
+		5D49F33F2AC7232000B9997F /* PointsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F33E2AC7232000B9997F /* PointsManager.swift */; };
+		5D49F3422AC723D700B9997F /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3412AC723D700B9997F /* CLLocationCoordinate2D.swift */; };
+		5D49F3442AC7240700B9997F /* MKCoordinateRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3432AC7240700B9997F /* MKCoordinateRegion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5D49F3122AC6E26300B9997F /* WalkAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D49F3152AC6E26300B9997F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5D49F3172AC6E26300B9997F /* AugmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugmentedView.swift; sourceTree = "<group>"; };
 		5D49F3192AC6E26400B9997F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D49F31C2AC6E26400B9997F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5D49F3252AC6E35400B9997F /* toy_car.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_car.usdz; sourceTree = "<group>"; };
 		5D49F3262AC6E35400B9997F /* fender_stratocaster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = fender_stratocaster.usdz; sourceTree = "<group>"; };
 		5D49F3272AC6E35400B9997F /* tv_retro.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = tv_retro.usdz; sourceTree = "<group>"; };
 		5D49F3282AC6E35400B9997F /* toy_biplane_idle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_biplane_idle.usdz; sourceTree = "<group>"; };
+		5D49F33E2AC7232000B9997F /* PointsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsManager.swift; sourceTree = "<group>"; };
+		5D49F3412AC723D700B9997F /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
+		5D49F3432AC7240700B9997F /* MKCoordinateRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +65,10 @@
 		5D49F3142AC6E26300B9997F /* WalkAR */ = {
 			isa = PBXGroup;
 			children = (
+				5D49F3402AC7233800B9997F /* Extensions */,
 				5D49F3192AC6E26400B9997F /* Assets.xcassets */,
 				5D49F3152AC6E26300B9997F /* AppDelegate.swift */,
-				5D49F3172AC6E26300B9997F /* AugmentedView.swift */,
-				5D49F32D2AC6E3BD00B9997F /* Application */,
+				5D49F3312AC6E5CC00B9997F /* Core */,
 				5D49F3232AC6E33B00B9997F /* Resources */,
 				5D49F31B2AC6E26400B9997F /* Preview Content */,
 			);
@@ -98,11 +102,29 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		5D49F32D2AC6E3BD00B9997F /* Application */ = {
+		5D49F3312AC6E5CC00B9997F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5D49F33D2AC7231700B9997F /* PointsManager */,
 			);
-			path = Application;
+			path = Core;
+			sourceTree = "<group>";
+		};
+		5D49F33D2AC7231700B9997F /* PointsManager */ = {
+			isa = PBXGroup;
+			children = (
+				5D49F33E2AC7232000B9997F /* PointsManager.swift */,
+			);
+			path = PointsManager;
+			sourceTree = "<group>";
+		};
+		5D49F3402AC7233800B9997F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5D49F3412AC723D700B9997F /* CLLocationCoordinate2D.swift */,
+				5D49F3432AC7240700B9997F /* MKCoordinateRegion.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,8 +207,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D49F3182AC6E26300B9997F /* AugmentedView.swift in Sources */,
+				5D49F33F2AC7232000B9997F /* PointsManager.swift in Sources */,
 				5D49F3162AC6E26300B9997F /* AppDelegate.swift in Sources */,
+				5D49F3422AC723D700B9997F /* CLLocationCoordinate2D.swift in Sources */,
+				5D49F3442AC7240700B9997F /* MKCoordinateRegion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
