@@ -21,6 +21,9 @@
 		5D49F3492AC724BC00B9997F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3482AC724BC00B9997F /* HomeView.swift */; };
 		5D49F34C2AC724D500B9997F /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F34B2AC724D500B9997F /* Steps.swift */; };
 		5D49F34F2AC7293D00B9997F /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F34E2AC7293D00B9997F /* HealthManager.swift */; };
+		5D49F3532AC7421900B9997F /* MapboxCoreNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 5D49F3522AC7421900B9997F /* MapboxCoreNavigation */; };
+		5D49F3552AC7421900B9997F /* MapboxNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 5D49F3542AC7421900B9997F /* MapboxNavigation */; };
+		5D49F3582AC7436200B9997F /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 5D49F3572AC7436200B9997F /* MapboxMaps */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,7 @@
 		5D49F3482AC724BC00B9997F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5D49F34B2AC724D500B9997F /* Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steps.swift; sourceTree = "<group>"; };
 		5D49F34E2AC7293D00B9997F /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		5D49F3502AC72C8500B9997F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D49F3532AC7421900B9997F /* MapboxCoreNavigation in Frameworks */,
+				5D49F3552AC7421900B9997F /* MapboxNavigation in Frameworks */,
+				5D49F3582AC7436200B9997F /* MapboxMaps in Frameworks */,
 				5D49F3302AC6E55F00B9997F /* FocusEntity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +78,7 @@
 		5D49F3142AC6E26300B9997F /* WalkAR */ = {
 			isa = PBXGroup;
 			children = (
+				5D49F3502AC72C8500B9997F /* Info.plist */,
 				5D49F3402AC7233800B9997F /* Extensions */,
 				5D49F3192AC6E26400B9997F /* Assets.xcassets */,
 				5D49F3152AC6E26300B9997F /* AppDelegate.swift */,
@@ -194,6 +202,9 @@
 			name = WalkAR;
 			packageProductDependencies = (
 				5D49F32F2AC6E55F00B9997F /* FocusEntity */,
+				5D49F3522AC7421900B9997F /* MapboxCoreNavigation */,
+				5D49F3542AC7421900B9997F /* MapboxNavigation */,
+				5D49F3572AC7436200B9997F /* MapboxMaps */,
 			);
 			productName = WalkAR;
 			productReference = 5D49F3122AC6E26300B9997F /* WalkAR.app */;
@@ -225,6 +236,8 @@
 			mainGroup = 5D49F3092AC6E26300B9997F;
 			packageReferences = (
 				5D49F32E2AC6E55F00B9997F /* XCRemoteSwiftPackageReference "FocusEntity" */,
+				5D49F3512AC7421900B9997F /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */,
+				5D49F3562AC7436200B9997F /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
 			);
 			productRefGroup = 5D49F3132AC6E26300B9997F /* Products */;
 			projectDirPath = "";
@@ -399,7 +412,10 @@
 				DEVELOPMENT_TEAM = G4XLFMNW66;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_FILE = WalkAR/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow app to access your health data";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow app to use your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
@@ -430,7 +446,10 @@
 				DEVELOPMENT_TEAM = G4XLFMNW66;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_FILE = WalkAR/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow app to access your health data";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow app to use your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
@@ -482,6 +501,22 @@
 				minimumVersion = 2.5.0;
 			};
 		};
+		5D49F3512AC7421900B9997F /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-navigation-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.14.0;
+			};
+		};
+		5D49F3562AC7436200B9997F /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -489,6 +524,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5D49F32E2AC6E55F00B9997F /* XCRemoteSwiftPackageReference "FocusEntity" */;
 			productName = FocusEntity;
+		};
+		5D49F3522AC7421900B9997F /* MapboxCoreNavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D49F3512AC7421900B9997F /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */;
+			productName = MapboxCoreNavigation;
+		};
+		5D49F3542AC7421900B9997F /* MapboxNavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D49F3512AC7421900B9997F /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */;
+			productName = MapboxNavigation;
+		};
+		5D49F3572AC7436200B9997F /* MapboxMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D49F3562AC7436200B9997F /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;
+			productName = MapboxMaps;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
