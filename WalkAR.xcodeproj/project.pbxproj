@@ -20,6 +20,7 @@
 		5D49F3442AC7240700B9997F /* MKCoordinateRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3432AC7240700B9997F /* MKCoordinateRegion.swift */; };
 		5D49F3492AC724BC00B9997F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3482AC724BC00B9997F /* HomeView.swift */; };
 		5D49F34C2AC724D500B9997F /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F34B2AC724D500B9997F /* Steps.swift */; };
+		5D49F34F2AC7293D00B9997F /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F34E2AC7293D00B9997F /* HealthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		5D49F3432AC7240700B9997F /* MKCoordinateRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegion.swift; sourceTree = "<group>"; };
 		5D49F3482AC724BC00B9997F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5D49F34B2AC724D500B9997F /* Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steps.swift; sourceTree = "<group>"; };
+		5D49F34E2AC7293D00B9997F /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,9 +162,18 @@
 		5D49F34A2AC724CA00B9997F /* Steps */ = {
 			isa = PBXGroup;
 			children = (
+				5D49F34D2AC7292500B9997F /* HealthManager */,
 				5D49F34B2AC724D500B9997F /* Steps.swift */,
 			);
 			path = Steps;
+			sourceTree = "<group>";
+		};
+		5D49F34D2AC7292500B9997F /* HealthManager */ = {
+			isa = PBXGroup;
+			children = (
+				5D49F34E2AC7293D00B9997F /* HealthManager.swift */,
+			);
+			path = HealthManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +262,7 @@
 				5D49F34C2AC724D500B9997F /* Steps.swift in Sources */,
 				5D49F3492AC724BC00B9997F /* HomeView.swift in Sources */,
 				5D49F3442AC7240700B9997F /* MKCoordinateRegion.swift in Sources */,
+				5D49F34F2AC7293D00B9997F /* HealthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
