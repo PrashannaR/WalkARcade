@@ -8,19 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		5D49F3162AC6E26300B9997F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3152AC6E26300B9997F /* AppDelegate.swift */; };
-		5D49F3182AC6E26300B9997F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3172AC6E26300B9997F /* ContentView.swift */; };
+		5D49F3182AC6E26300B9997F /* AugmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3172AC6E26300B9997F /* AugmentedView.swift */; };
 		5D49F31A2AC6E26400B9997F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D49F3192AC6E26400B9997F /* Assets.xcassets */; };
 		5D49F31D2AC6E26400B9997F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D49F31C2AC6E26400B9997F /* Preview Assets.xcassets */; };
 		5D49F3292AC6E35400B9997F /* toy_car.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 5D49F3252AC6E35400B9997F /* toy_car.usdz */; };
 		5D49F32A2AC6E35400B9997F /* fender_stratocaster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 5D49F3262AC6E35400B9997F /* fender_stratocaster.usdz */; };
 		5D49F32B2AC6E35400B9997F /* tv_retro.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 5D49F3272AC6E35400B9997F /* tv_retro.usdz */; };
 		5D49F32C2AC6E35400B9997F /* toy_biplane_idle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 5D49F3282AC6E35400B9997F /* toy_biplane_idle.usdz */; };
+		5D49F3302AC6E55F00B9997F /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 5D49F32F2AC6E55F00B9997F /* FocusEntity */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5D49F3122AC6E26300B9997F /* WalkAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D49F3152AC6E26300B9997F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5D49F3172AC6E26300B9997F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5D49F3172AC6E26300B9997F /* AugmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugmentedView.swift; sourceTree = "<group>"; };
 		5D49F3192AC6E26400B9997F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D49F31C2AC6E26400B9997F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5D49F3252AC6E35400B9997F /* toy_car.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_car.usdz; sourceTree = "<group>"; };
@@ -34,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D49F3302AC6E55F00B9997F /* FocusEntity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +63,7 @@
 			children = (
 				5D49F3192AC6E26400B9997F /* Assets.xcassets */,
 				5D49F3152AC6E26300B9997F /* AppDelegate.swift */,
-				5D49F3172AC6E26300B9997F /* ContentView.swift */,
+				5D49F3172AC6E26300B9997F /* AugmentedView.swift */,
 				5D49F32D2AC6E3BD00B9997F /* Application */,
 				5D49F3232AC6E33B00B9997F /* Resources */,
 				5D49F31B2AC6E26400B9997F /* Preview Content */,
@@ -119,6 +121,9 @@
 			dependencies = (
 			);
 			name = WalkAR;
+			packageProductDependencies = (
+				5D49F32F2AC6E55F00B9997F /* FocusEntity */,
+			);
 			productName = WalkAR;
 			productReference = 5D49F3122AC6E26300B9997F /* WalkAR.app */;
 			productType = "com.apple.product-type.application";
@@ -147,6 +152,9 @@
 				Base,
 			);
 			mainGroup = 5D49F3092AC6E26300B9997F;
+			packageReferences = (
+				5D49F32E2AC6E55F00B9997F /* XCRemoteSwiftPackageReference "FocusEntity" */,
+			);
 			productRefGroup = 5D49F3132AC6E26300B9997F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -177,7 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D49F3182AC6E26300B9997F /* ContentView.swift in Sources */,
+				5D49F3182AC6E26300B9997F /* AugmentedView.swift in Sources */,
 				5D49F3162AC6E26300B9997F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +396,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5D49F32E2AC6E55F00B9997F /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxxfrazer/FocusEntity";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5D49F32F2AC6E55F00B9997F /* FocusEntity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D49F32E2AC6E55F00B9997F /* XCRemoteSwiftPackageReference "FocusEntity" */;
+			productName = FocusEntity;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5D49F30A2AC6E26300B9997F /* Project object */;
 }

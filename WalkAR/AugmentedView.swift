@@ -7,8 +7,11 @@
 
 import SwiftUI
 import RealityKit
+import ARKit
+import FocusEntity
 
-struct ContentView : View {
+
+struct AugmentedView : View {
     var body: some View {
         ARViewContainer().edgesIgnoringSafeArea(.all)
     }
@@ -41,5 +44,5 @@ struct ARViewContainer: UIViewRepresentable {
 }
 
 #Preview {
-    ContentView()
+    AugmentedView()
 }
