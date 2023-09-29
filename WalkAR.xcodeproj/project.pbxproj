@@ -18,6 +18,8 @@
 		5D49F33F2AC7232000B9997F /* PointsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F33E2AC7232000B9997F /* PointsManager.swift */; };
 		5D49F3422AC723D700B9997F /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3412AC723D700B9997F /* CLLocationCoordinate2D.swift */; };
 		5D49F3442AC7240700B9997F /* MKCoordinateRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3432AC7240700B9997F /* MKCoordinateRegion.swift */; };
+		5D49F3492AC724BC00B9997F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3482AC724BC00B9997F /* HomeView.swift */; };
+		5D49F34C2AC724D500B9997F /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F34B2AC724D500B9997F /* Steps.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		5D49F33E2AC7232000B9997F /* PointsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsManager.swift; sourceTree = "<group>"; };
 		5D49F3412AC723D700B9997F /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
 		5D49F3432AC7240700B9997F /* MKCoordinateRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegion.swift; sourceTree = "<group>"; };
+		5D49F3482AC724BC00B9997F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5D49F34B2AC724D500B9997F /* Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steps.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 		5D49F3312AC6E5CC00B9997F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5D49F3452AC7249400B9997F /* View */,
 				5D49F33D2AC7231700B9997F /* PointsManager */,
 			);
 			path = Core;
@@ -125,6 +130,39 @@
 				5D49F3432AC7240700B9997F /* MKCoordinateRegion.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5D49F3452AC7249400B9997F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D49F3462AC7249F00B9997F /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D49F3462AC7249F00B9997F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5D49F34A2AC724CA00B9997F /* Steps */,
+				5D49F3472AC724B500B9997F /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5D49F3472AC724B500B9997F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D49F3482AC724BC00B9997F /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D49F34A2AC724CA00B9997F /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				5D49F34B2AC724D500B9997F /* Steps.swift */,
+			);
+			path = Steps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +248,8 @@
 				5D49F33F2AC7232000B9997F /* PointsManager.swift in Sources */,
 				5D49F3162AC6E26300B9997F /* AppDelegate.swift in Sources */,
 				5D49F3422AC723D700B9997F /* CLLocationCoordinate2D.swift in Sources */,
+				5D49F34C2AC724D500B9997F /* Steps.swift in Sources */,
+				5D49F3492AC724BC00B9997F /* HomeView.swift in Sources */,
 				5D49F3442AC7240700B9997F /* MKCoordinateRegion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
