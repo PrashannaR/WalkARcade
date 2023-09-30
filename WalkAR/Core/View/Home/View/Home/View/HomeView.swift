@@ -24,7 +24,8 @@ struct HomeView: View {
                     Spacer()
 
                     NavigationLink {
-                        MyAreaMap()
+                        //MyAreaMap()
+                        SignUp()
 
                     } label: {
                         CustomButton(imageName: "map.fill", title: "Maps")

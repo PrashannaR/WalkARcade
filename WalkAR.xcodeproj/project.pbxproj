@@ -30,6 +30,9 @@
 		5D49F3692AC7470B00B9997F /* MyAreaMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3682AC7470B00B9997F /* MyAreaMap.swift */; };
 		5D49F36C2AC7473000B9997F /* MapBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F36B2AC7473000B9997F /* MapBoxViewController.swift */; };
 		5D49F36E2AC7477200B9997F /* MapBoxViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F36D2AC7477200B9997F /* MapBoxViewControllerRepresentable.swift */; };
+		5D49F3732AC8C0A400B9997F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3722AC8C0A400B9997F /* LoginView.swift */; };
+		5D49F3762AC8C21500B9997F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3752AC8C21500B9997F /* CustomButton.swift */; };
+		5D49F3792AC8C44C00B9997F /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3782AC8C44C00B9997F /* SignUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		5D49F3682AC7470B00B9997F /* MyAreaMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAreaMap.swift; sourceTree = "<group>"; };
 		5D49F36B2AC7473000B9997F /* MapBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBoxViewController.swift; sourceTree = "<group>"; };
 		5D49F36D2AC7477200B9997F /* MapBoxViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBoxViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		5D49F3722AC8C0A400B9997F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5D49F3752AC8C21500B9997F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		5D49F3782AC8C44C00B9997F /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +163,7 @@
 		5D49F3452AC7249400B9997F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5D49F36F2AC8C08B00B9997F /* Authentication */,
 				5D49F3662AC746DA00B9997F /* Map */,
 				5D49F3462AC7249F00B9997F /* Home */,
 			);
@@ -274,6 +281,48 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		5D49F36F2AC8C08B00B9997F /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				5D49F3772AC8C44200B9997F /* SignUp */,
+				5D49F3742AC8C20300B9997F /* Componenets */,
+				5D49F3702AC8C09200B9997F /* Login */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		5D49F3702AC8C09200B9997F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5D49F3712AC8C09B00B9997F /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		5D49F3712AC8C09B00B9997F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D49F3722AC8C0A400B9997F /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D49F3742AC8C20300B9997F /* Componenets */ = {
+			isa = PBXGroup;
+			children = (
+				5D49F3752AC8C21500B9997F /* CustomButton.swift */,
+			);
+			path = Componenets;
+			sourceTree = "<group>";
+		};
+		5D49F3772AC8C44200B9997F /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				5D49F3782AC8C44C00B9997F /* SignUp.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -367,11 +416,14 @@
 				5D49F3652AC744CB00B9997F /* ContentViewModel.swift in Sources */,
 				5D49F34C2AC724D500B9997F /* Steps.swift in Sources */,
 				5D49F3692AC7470B00B9997F /* MyAreaMap.swift in Sources */,
+				5D49F3732AC8C0A400B9997F /* LoginView.swift in Sources */,
 				5D49F36C2AC7473000B9997F /* MapBoxViewController.swift in Sources */,
 				5D49F3602AC743FD00B9997F /* ARCameraView.swift in Sources */,
 				5D49F3492AC724BC00B9997F /* HomeView.swift in Sources */,
 				5D49F3442AC7240700B9997F /* MKCoordinateRegion.swift in Sources */,
+				5D49F3792AC8C44C00B9997F /* SignUp.swift in Sources */,
 				5D49F34F2AC7293D00B9997F /* HealthManager.swift in Sources */,
+				5D49F3762AC8C21500B9997F /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
