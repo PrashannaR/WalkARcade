@@ -26,6 +26,10 @@
 		5D49F3582AC7436200B9997F /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 5D49F3572AC7436200B9997F /* MapboxMaps */; };
 		5D49F3602AC743FD00B9997F /* ARCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F35F2AC743FD00B9997F /* ARCameraView.swift */; };
 		5D49F3632AC7446C00B9997F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3622AC7446C00B9997F /* Model.swift */; };
+		5D49F3652AC744CB00B9997F /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3642AC744CB00B9997F /* ContentViewModel.swift */; };
+		5D49F3692AC7470B00B9997F /* MyAreaMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3682AC7470B00B9997F /* MyAreaMap.swift */; };
+		5D49F36C2AC7473000B9997F /* MapBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F36B2AC7473000B9997F /* MapBoxViewController.swift */; };
+		5D49F36E2AC7477200B9997F /* MapBoxViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F36D2AC7477200B9997F /* MapBoxViewControllerRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		5D49F3502AC72C8500B9997F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5D49F35F2AC743FD00B9997F /* ARCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCameraView.swift; sourceTree = "<group>"; };
 		5D49F3622AC7446C00B9997F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		5D49F3642AC744CB00B9997F /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		5D49F3682AC7470B00B9997F /* MyAreaMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAreaMap.swift; sourceTree = "<group>"; };
+		5D49F36B2AC7473000B9997F /* MapBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBoxViewController.swift; sourceTree = "<group>"; };
+		5D49F36D2AC7477200B9997F /* MapBoxViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBoxViewControllerRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +157,7 @@
 		5D49F3452AC7249400B9997F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5D49F3662AC746DA00B9997F /* Map */,
 				5D49F3462AC7249F00B9997F /* Home */,
 			);
 			path = View;
@@ -226,6 +235,7 @@
 		5D49F35D2AC743E000B9997F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5D49F3642AC744CB00B9997F /* ContentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -236,6 +246,32 @@
 				5D49F35F2AC743FD00B9997F /* ARCameraView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5D49F3662AC746DA00B9997F /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				5D49F3672AC746E500B9997F /* View */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		5D49F3672AC746E500B9997F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D49F36A2AC7471B00B9997F /* UIKit */,
+				5D49F3682AC7470B00B9997F /* MyAreaMap.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D49F36A2AC7471B00B9997F /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				5D49F36B2AC7473000B9997F /* MapBoxViewController.swift */,
+				5D49F36D2AC7477200B9997F /* MapBoxViewControllerRepresentable.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,10 +360,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D49F3632AC7446C00B9997F /* Model.swift in Sources */,
+				5D49F36E2AC7477200B9997F /* MapBoxViewControllerRepresentable.swift in Sources */,
 				5D49F33F2AC7232000B9997F /* PointsManager.swift in Sources */,
 				5D49F3162AC6E26300B9997F /* AppDelegate.swift in Sources */,
 				5D49F3422AC723D700B9997F /* CLLocationCoordinate2D.swift in Sources */,
+				5D49F3652AC744CB00B9997F /* ContentViewModel.swift in Sources */,
 				5D49F34C2AC724D500B9997F /* Steps.swift in Sources */,
+				5D49F3692AC7470B00B9997F /* MyAreaMap.swift in Sources */,
+				5D49F36C2AC7473000B9997F /* MapBoxViewController.swift in Sources */,
 				5D49F3602AC743FD00B9997F /* ARCameraView.swift in Sources */,
 				5D49F3492AC724BC00B9997F /* HomeView.swift in Sources */,
 				5D49F3442AC7240700B9997F /* MKCoordinateRegion.swift in Sources */,
@@ -470,7 +510,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WalkAR/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow app to access your health data";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow app to access your health data";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow app to use your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -504,7 +544,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WalkAR/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow app to access your health data";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow app to access your health data";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow app to use your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
