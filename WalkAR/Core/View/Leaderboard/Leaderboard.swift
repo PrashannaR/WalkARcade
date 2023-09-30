@@ -21,6 +21,9 @@ struct LeaderboardData: Codable {
 }
 
 struct Leaderboard: View {
+    
+    @StateObject var healthManager = HealthManager()
+    
     @State private var users: [User] = []
 
     @State private var myUser: LeaderboardData = LeaderboardData(username: "", points: 0, steps: 0)
@@ -43,11 +46,12 @@ struct Leaderboard: View {
                                     .font(.headline)
                             }
                             Spacer()
-                            Text("Steps: \(myUser.steps)")
+                            Text("Steps: \(Int(healthManager.todaysSteps))")
                                 .foregroundStyle(Color.black.opacity(0.3))
                                 .font(.headline)
                         }
                         .foregroundColor(Color.black)
+                        .padding(.bottom, 30)
                         
                         Text("Leaderboard")
                             .font(.title2)
@@ -60,12 +64,10 @@ struct Leaderboard: View {
                                     Text("\(user.username)")
                                         .font(.title3)
                                         .fontWeight(.bold)
-                                    Text("Points: \(user.points)")
-                                        .foregroundStyle(Color.black.opacity(0.3))
-                                        .font(.headline)
+
                                 }
                                 Spacer()
-                                Text("Steps: \(user.steps)")
+                                Text("Points: \(user.points)")
                                     .foregroundStyle(Color.black.opacity(0.3))
                                     .font(.headline)
                             }
@@ -81,6 +83,7 @@ struct Leaderboard: View {
                 .onAppear {
                     fetchData()
                     loadData()
+                    healthManager.fetchTodaysStep()
                 }
             }
         }

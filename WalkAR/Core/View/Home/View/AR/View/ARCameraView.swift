@@ -12,31 +12,90 @@ import SwiftUI
 
 struct ARCameraView: View {
     let modelToBePlaced: Model
-
+    
+    @State var user: LeaderboardData?
+    @State var myUser: LeaderboardData = LeaderboardData(username: "prashannar", points: 70, steps: 2000)
     @State private var navigateToHome = false
+    @StateObject var healthManager = HealthManager()
+    
+    @State var myPoints: Int?
 
     var body: some View {
         ZStack(alignment: .bottom, content: {
             VStack(alignment: .leading) {
                 HStack {
-                    Text("Points: \(PointsManager.shared.points)")
+                    Text("Points: \(myUser.points)")
                         .font(.title)
-                        .foregroundStyle(.white)
                         .fontWeight(.bold)
-                    Steps()
                 }.padding()
                 ARViewContainer(modelConfirmedForPlacement: modelToBePlaced)
             }
 
         })
+        .onAppear {
+            healthManager.fetchTodaysStep()
+        }
         .background(
             NavigationLink("", destination: HomeView(), isActive: $navigateToHome)
                 .opacity(0) // Hide the navigation link
         )
         .onReceive(NotificationCenter.default.publisher(for: .pointsIncreased)) { _ in
-
+            //updateUserData(username: "prashannar", steps: Int(healthManager.todaysSteps), pointsIncrement: 10)
+            updateUserData(steps: Int(healthManager.todaysSteps), pointsIncrement: 10)
             navigateToHome = true
         }
+    }
+}
+
+extension ARCameraView{
+    
+    func loadData() {
+        guard let url = URL(string: "http://192.168.101.121:8000/leaderboard/prashannar/") else { return }
+
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            if let data = data {
+                do {
+                    let decoder = JSONDecoder()
+                    let decodedData = try decoder.decode(LeaderboardData.self, from: data)
+                    DispatchQueue.main.async {
+                        self.myUser = decodedData
+                    }
+                } catch {
+                    print("Error decoding data: \(error)")
+                }
+            }
+        }.resume()
+    }
+
+
+    func updateUserData(steps: Int, pointsIncrement: Int) {
+        guard let url = URL(string: "http://192.168.101.121:8000/leaderboard/prashannar/") else { return }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "PUT"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        // Increment the current points by the specified value
+        let updatedData: [String: Any] = [
+            "steps": steps,
+            "points": user?.points ?? 0 + pointsIncrement
+        ]
+
+        do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: updatedData)
+            print("updated")
+        } catch {
+            print("Error serializing JSON: \(error)")
+        }
+
+        URLSession.shared.dataTask(with: request) { _, _, error in
+            if let error = error {
+                print("Error updating user data: \(error)")
+            } else {
+                // Reload data after update
+                self.loadData()
+            }
+        }.resume()
     }
 }
 

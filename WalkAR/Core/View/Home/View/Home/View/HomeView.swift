@@ -28,8 +28,8 @@ struct HomeView: View {
                         Spacer()
 
                         NavigationLink {
-                           // MyAreaMap()
-                            Leaderboard()
+                            MyAreaMap()
+                           
 
                         } label: {
                             CustomButton(imageName: "map.fill", title: "Maps")
@@ -40,12 +40,11 @@ struct HomeView: View {
                         } label: {
                             CustomButton(imageName: "camera.fill", title: "AR")
                         }
+                        
+                        Image("step")
+                            .resizable()
+                            .scaledToFit()
 
-                        NavigationLink {
-                            Steps()
-                        } label: {
-                            CustomButton(imageName: "figure.walk", title: "Steps")
-                        }
                     }
                     .background {
                         Color.white
