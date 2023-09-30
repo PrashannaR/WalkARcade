@@ -4,6 +4,11 @@
 <dict>
 	<key>MBXAccessToken</key>
 	<string>sk.eyJ1IjoicHJhc2hhbm5hciIsImEiOiJjbG16dDhhMWMwYjk2Mm5tdjViOTVlOHBsIn0.IysRkEKr9bpUqhq7qYyI2w</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>

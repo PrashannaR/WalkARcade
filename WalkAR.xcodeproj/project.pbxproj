@@ -33,6 +33,7 @@
 		5D49F3732AC8C0A400B9997F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3722AC8C0A400B9997F /* LoginView.swift */; };
 		5D49F3762AC8C21500B9997F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3752AC8C21500B9997F /* CustomButton.swift */; };
 		5D49F3792AC8C44C00B9997F /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3782AC8C44C00B9997F /* SignUp.swift */; };
+		5D49F3822AC8C8B000B9997F /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49F3812AC8C8B000B9997F /* Leaderboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		5D49F3722AC8C0A400B9997F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5D49F3752AC8C21500B9997F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		5D49F3782AC8C44C00B9997F /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		5D49F3812AC8C8B000B9997F /* Leaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 		5D49F3452AC7249400B9997F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5D49F3802AC8C8A300B9997F /* Leaderboard */,
 				5D49F36F2AC8C08B00B9997F /* Authentication */,
 				5D49F3662AC746DA00B9997F /* Map */,
 				5D49F3462AC7249F00B9997F /* Home */,
@@ -323,6 +326,14 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		5D49F3802AC8C8A300B9997F /* Leaderboard */ = {
+			isa = PBXGroup;
+			children = (
+				5D49F3812AC8C8B000B9997F /* Leaderboard.swift */,
+			);
+			path = Leaderboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -419,6 +430,7 @@
 				5D49F3732AC8C0A400B9997F /* LoginView.swift in Sources */,
 				5D49F36C2AC7473000B9997F /* MapBoxViewController.swift in Sources */,
 				5D49F3602AC743FD00B9997F /* ARCameraView.swift in Sources */,
+				5D49F3822AC8C8B000B9997F /* Leaderboard.swift in Sources */,
 				5D49F3492AC724BC00B9997F /* HomeView.swift in Sources */,
 				5D49F3442AC7240700B9997F /* MKCoordinateRegion.swift in Sources */,
 				5D49F3792AC8C44C00B9997F /* SignUp.swift in Sources */,
