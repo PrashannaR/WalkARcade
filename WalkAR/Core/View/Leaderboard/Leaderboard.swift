@@ -61,6 +61,10 @@ struct Leaderboard: View {
                             .font(.title2)
                             .bold()
                             .foregroundStyle(.blue)
+                        Text("Look how well you are performing among all the other users")
+                            .lineLimit(2)
+                            .font(.headline)
+                            .foregroundStyle(Color.black.opacity(0.2))
 
                         List(users) { user in
                             HStack {
