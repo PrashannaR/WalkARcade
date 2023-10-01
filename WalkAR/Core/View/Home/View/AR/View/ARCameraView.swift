@@ -40,14 +40,43 @@ struct ARCameraView: View {
                 .opacity(0) // Hide the navigation link
         )
         .onReceive(NotificationCenter.default.publisher(for: .pointsIncreased)) { _ in
-            //updateUserData(username: "prashannar", steps: Int(healthManager.todaysSteps), pointsIncrement: 10)
-            updateUserData(steps: Int(healthManager.todaysSteps), pointsIncrement: 10)
+            updatePointsInBackend()
+
             navigateToHome = true
         }
     }
 }
 
 extension ARCameraView{
+    
+    // Function to update points in the backend
+    func updatePointsInBackend() {
+        guard let url = URL(string: "http://192.168.101.121:8000/leaderboard/prashannar/") else { return }
+        var request = URLRequest(url: url)
+        request.httpMethod = "PUT"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        let updatedData: [String: Any] = [
+            "username": myUser.username,
+            "points": myUser.points + 10,  // Increment points by 10
+            "steps": Int(healthManager.todaysSteps)
+        ]
+
+        do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: updatedData)
+        } catch {
+            print("Error serializing JSON: \(error)")
+        }
+
+        URLSession.shared.dataTask(with: request) { _, _, error in
+            if let error = error {
+                print("Error updating user data: \(error)")
+            } else {
+                // Reload data after update (optional)
+                loadData()
+            }
+        }.resume()
+    }
     
     func loadData() {
         guard let url = URL(string: "http://192.168.101.121:8000/leaderboard/prashannar/") else { return }
@@ -67,37 +96,9 @@ extension ARCameraView{
         }.resume()
     }
 
-
-    func updateUserData(steps: Int, pointsIncrement: Int) {
-        guard let url = URL(string: "http://192.168.101.121:8000/leaderboard/prashannar/") else { return }
-
-        var request = URLRequest(url: url)
-        request.httpMethod = "PUT"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        // Increment the current points by the specified value
-        let updatedData: [String: Any] = [
-            "steps": steps,
-            "points": user?.points ?? 0 + pointsIncrement
-        ]
-
-        do {
-            request.httpBody = try JSONSerialization.data(withJSONObject: updatedData)
-            print("updated")
-        } catch {
-            print("Error serializing JSON: \(error)")
-        }
-
-        URLSession.shared.dataTask(with: request) { _, _, error in
-            if let error = error {
-                print("Error updating user data: \(error)")
-            } else {
-                // Reload data after update
-                self.loadData()
-            }
-        }.resume()
-    }
 }
+
+
 
 // MARK: ARView Container
 
