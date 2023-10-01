@@ -21,16 +21,14 @@ struct LeaderboardData: Codable {
 }
 
 struct Leaderboard: View {
-    
     @StateObject var healthManager = HealthManager()
-    
+
     @State private var users: [User] = []
 
     @State private var myUser: LeaderboardData = LeaderboardData(username: "", points: 0, steps: 0)
 
     var body: some View {
-        ZStack{
-            
+        ZStack {
             NavigationView {
                 ZStack {
                     Color.white.ignoresSafeArea()
@@ -38,21 +36,27 @@ struct Leaderboard: View {
                     VStack(alignment: .leading) {
                         HStack {
                             VStack(alignment: .leading) {
-                                Text("\(myUser.username)")
+                                Text("Hi \(myUser.username)!")
                                     .font(.title3)
                                     .fontWeight(.bold)
-                                Text("Points: \(myUser.points)")
-                                    .foregroundStyle(Color.black.opacity(0.3))
+                                Text("Have a quick look into your stats")
                                     .font(.headline)
+                                    .foregroundStyle(Color.black.opacity(0.2))
+                                HStack {
+                                    Text("Points: \(myUser.points)")
+                                        .foregroundStyle(Color.black.opacity(0.3))
+                                        .font(.headline)
+                                    Spacer()
+                                    Text("Steps: \(Int(healthManager.todaysSteps))")
+                                        .foregroundStyle(Color.black.opacity(0.3))
+                                        .font(.headline)
+                                }
                             }
-                            Spacer()
-                            Text("Steps: \(Int(healthManager.todaysSteps))")
-                                .foregroundStyle(Color.black.opacity(0.3))
-                                .font(.headline)
+                           
                         }
                         .foregroundColor(Color.black)
                         .padding(.bottom, 30)
-                        
+
                         Text("Leaderboard")
                             .font(.title2)
                             .bold()
@@ -64,7 +68,6 @@ struct Leaderboard: View {
                                     Text("\(user.username)")
                                         .font(.title3)
                                         .fontWeight(.bold)
-
                                 }
                                 Spacer()
                                 Text("Points: \(user.points)")
@@ -87,7 +90,6 @@ struct Leaderboard: View {
                 }
             }
         }
-
     }
 
     func fetchData() {
