@@ -16,18 +16,18 @@ struct HomeView: View {
             ZStack {
                 Color.white.ignoresSafeArea()
 
-                ScrollView {
+                
                     VStack(alignment: .leading) {
                         Leaderboard()
+                        
+                        Spacer()
 
                         Image("step")
                             .resizable()
                             .scaledToFit()
                     }
-                    .background {
-                        Color.white
-                    }
-                }.padding()
+
+                .padding()
             }
             .toolbar(content: {
                 ToolbarItem(placement: .topBarTrailing) {
