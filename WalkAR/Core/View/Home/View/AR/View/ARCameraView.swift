@@ -33,6 +33,7 @@ struct ARCameraView: View {
 
         })
         .onAppear {
+            loadData()
             healthManager.fetchTodaysStep()
         }
         .background(

@@ -20,7 +20,6 @@ struct HomeView: View {
                     VStack(alignment: .leading) {
                         Leaderboard()
 
-
                         Image("step")
                             .resizable()
                             .scaledToFit()
@@ -60,8 +59,6 @@ struct HomeView: View {
                     model = vm.generateRandomModel()
                     print("generated model: ", model.modelName)
                 }
-            }
-            .onAppear {
                 NotificationCenter.default.addObserver(
                     forName: .pointsIncreased,
                     object: nil,
@@ -69,8 +66,10 @@ struct HomeView: View {
                 ) { _ in
                 }
             }
+            
         }
         .navigationBarBackButtonHidden()
+        
     }
 }
 
